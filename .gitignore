@@ -8,3 +8,6 @@ info.txt
 log 0.2.0.txt
 mpoptions.lfm
 mpoptions.pas
+
+# Ignore unzipped packages, but still track .zip files
+Packages/*/*

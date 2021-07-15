@@ -540,6 +540,7 @@ var
   MaxPeersAllow : integer = 50;
   PoolStepsDeep : integer = 3;
   WO_AutoConnect   : boolean = false;
+  WO_AutoServer    : boolean = false;
   WO_ToTray        : boolean = false;
   MinConexToWork   : integer = 1;
   WO_PosWarning    : int64 = 7;
@@ -1190,6 +1191,7 @@ G_Launching := false;
 OutText('Noso is ready',false,1);
 if UserOptions.AutoServer then ProcessLinesAdd('SERVERON');
 if WO_AutoConnect then ProcessLinesAdd('CONNECT');
+if WO_AutoServer then ProcessLinesAdd('SERVERON');
 if RPCAuto then  ProcessLinesAdd('RPCON');
 FormInicio.BorderIcons:=FormInicio.BorderIcons+[bisystemmenu];
 FirstShow := true;

@@ -494,6 +494,7 @@ setmilitime('CreateADV',1);
    writeln(FileAdvOptions,'MaxPeers '+IntToStr(MaxPeersAllow));
    writeln(FileAdvOptions,'PoolStepsDeep '+IntToStr(PoolStepsDeep));
    writeln(FileAdvOptions,'AutoConnect '+BoolToStr(WO_AutoConnect,true));
+   writeln(FileAdvOptions,'AutoServer '+BoolToStr(WO_AutoServer,true));
    writeln(FileAdvOptions,'ToTray '+BoolToStr(WO_ToTray,true));
    writeln(FileAdvOptions,'MinConexToWork '+IntToStr(MinConexToWork));
    writeln(FileAdvOptions,'PosWarning '+IntToStr(WO_PosWarning));
@@ -537,6 +538,7 @@ Begin
       if parameter(linea,0) ='MaxPeers' then MaxPeersAllow:=StrToIntDef(Parameter(linea,1),MaxPeersAllow);
       if parameter(linea,0) ='PoolStepsDeep' then PoolStepsDeep:=StrToIntDef(Parameter(linea,1),PoolStepsDeep);
       if parameter(linea,0) ='AutoConnect' then WO_AutoConnect:=StrToBool(Parameter(linea,1));
+      if parameter(linea,0) ='AutoServer' then WO_AutoServer:=StrToBool(Parameter(linea,1));
       if parameter(linea,0) ='ToTray' then WO_ToTray:=StrToBool(Parameter(linea,1));
       if parameter(linea,0) ='MinConexToWork' then MinConexToWork:=StrToIntDef(Parameter(linea,1),MinConexToWork);
       if parameter(linea,0) ='PosWarning' then WO_PosWarning:=StrToIntDef(Parameter(linea,1),WO_PosWarning);
